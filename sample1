@@ -1,269 +1,261 @@
-Redacted Current Config
-
 {
-    "server": {
-        "port": 8080,
-        "origin": "*",
-        "autostart": 0,
-        "home_setup_id": "X-HM://0023ISYWY7E9K",
-        "polling_seconds": 5
-    },
-    "client": {
-        "default_route": "status",
-        "inactive_logoff": 30,
-        "theme": "hoobs-light",
-        "locale": "en",
-        "temp_units": "celsius",
-        "country_code": "AU",
-        "postal_code": "1234",
-        "latitude": “-99.99999”,
-        "longitude": “111.111111”
-    },
-    "bridge": {
-        "name": "HOOBS",
-        "port": 51826,
-        "pin": “XXX-XX-XXX,
-        "username": "B7:EC:94:XX:XX:XX"
-    },
-    "description": "",
-    "ports": {},
-    "accessories": [],
-    "platforms": [
-        {
-            "platform": "BroadlinkRM",
-            "name": "Broadlink RM",
-            "hideScanFrequencyButton": true,
-            "hideLearnButton": false,
-            "hideWelcomeMessage": true,
-            "accessories": [
-                {
-                    "name": "Air Con",
-                    "type": "switch",
-                    "enableAutoOff": false,
-                    "data": {
-                        "on": "260078006500012d11320e1311140f13111210140f13111210120f3311120e13113210330f3310331012103211320f34103310330f33113211330e13111110121111101210120e1311120f121112101111110f34103310111132101211321111103310120e1311120f12111211110f131033103211320f3411000d05",
-                        "off": "2600ee006500012c113210121111111210120f12111110121111103310120f1211321012113210321132103310321033101210120f1211120f12111210120f1210141113101310130f141112101310121110111210111111101210120f1211120e13111111111012101210120f121111101210121012101211526400012c1131101211110f13111110121111101210120f330f131012101111120f3311111033103311341132101210321111103310330e131111101210120f12111110120f1310120f1211120f1211320f1310330e341111101210120f3311111111111211120e1311110f1310120f1211320f3410000d0500000000000000000000"
-                    }
-                },
-                {
-                    "name": "Air Con - Quiet",
-                    "type": "switch",
-                    "enableAutoOff": false,
-                    "data": {
-                        "on": "260078006500012d11320e1311140f13111210140f13111210120f3311120e13113210330f3310331012103211320f34103310330f33113211330e13111110121111101210120e1311120f121112101111110f34103310111132101211321111103310120e1311120f12111211110f131033103211320f3411000d05"
-                    }
-                },
-                {
-                    "name": "TV Power",
-                    "type": "switch",
-                    "enableAutoOff": false,
-                    "data": {
-                        "on": "2600500000012a93151111131411141113121410141213111338133713371237133712371436121214121336133614361237141213111411143613121312111313141337143614361400056c0001284a14000d050000000000000000",
-                        "off": "2600500000012995141212121412131213111313141114141437143715371337123714361436121214111436133614361237141212121411143514111313131315111436143612371400056c0001294913000d050000000000000000"
-                    }
-                },
-                {
-                    "name": "TV Vol Up",
-                    "type": "switch",
-                    "enableAutoOff": true,
-                    "onDuration": "0.5",
-                    "data": {
-                        "on": "2600500000012a94121213131312131212131312131114111436133613371337123713371237141114121237131213361411131214111411123813121237141114361336133712371400056c0001294a12000d050000000000000000"
-                    }
-                },
-                {
-                    "name": "TV Vol Down",
-                    "type": "switch",
-                    "enableAutoOff": true,
-                    "onDuration": "0.5",
-                    "data": {
-                        "on": "2600500000012994151113121213131214111412121214121337133712371436143712381237131313121436133614121411121313121411143612131412133614371138133713371200056d00012a4a14000d050000000000000000"
-                    }
-                },
-                {
-                    "name": "TV Mute",
-                    "type": "switch",
-                    "enableAutoOff": false,
-                    "data": {
-                        "on": "2600500000012995141114111411121314121312141112131436143614361337123914361436131213121312133614361336141212371312123714361212141213111436131214351300056d00012a4914000d050000000000000000"
-                    }
-                },
-                {
-                    "name": "Apple TV On",
-                    "type": "switch",
-                    "enableAutoOff": false,
-                    "data": {
-                        "on": "2600a8000001279413121237133712371213133614361237143513371435131214111412131212371336133714111214111313121214111315341412121411131214121213121312130005940001284912000c4f0001264a13000c4f0001264a14000c4d0001284915000c4c0001264a14000c4e0001264a13000c4e0001284914000c4d0001274913000c4f0001264a13000c4e0001284716000c4d0001284912000c4f0001274914000d05"
-                    }
-                }
-            ],
-            "hosts": [
-                {
-                    "address": "192.168.3.24",
-                    "mac": "78:0f:77:51:73:94",
-                    "isRFSupported": false
-                }
-            ]
-        },
-        {
-            "platform": "Camera-ffmpeg",
-            "plugin_map": {
-                "plugin_name": "homebridge-camera-ffmpeg"
-            },
-            "name": "Camera ffmpeg",
-            "cameras": [
-                {
-                    "name": "Frontyard",
-                    "videoConfig": {
-                        "source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/cGgfeq2RLMYwFled",
-                        "stillImageSource": "-i http://192.168.1.202/snap.jpeg",
-                        "maxStreams": 2,
-                        "maxWidth": 1024,
-                        "maxHeight": 576,
-                        "maxFPS": 15,
-                        "mapvideo": "0:1",
-                        "mapaudio": "0:0",
-                        "vcodec": "copy",
-                        "audio": true,
-                        "debug": true
-                    }
-                },
-                {
-                    "name": "Street",
-                    "videoConfig": {
-                        "source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/Akbo0dylhMrogxOb",
-                        "stillImageSource": "-i http://192.168.1.227/snap.jpeg",
-                        "maxStreams": 2,
-                        "maxWidth": 1024,
-                        "maxHeight": 576,
-                        "maxFPS": 15,
-                        "mapvideo": "0:1",
-                        "mapaudio": "0:0",
-                        "vcodec": "copy",
-                        "audio": true,
-                        "debug": true
-                    }
-                },
-                {
-                    "name": "Backyard",
-                    "videoConfig": {
-                        "source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/6s1eJTWhqVLWWtkQ",
-                        "stillImageSource": "-i http://192.168.1.201/snap.jpeg",
-                        "maxStreams": 2,
-                        "maxWidth": 1024,
-                        "maxHeight": 576,
-                        "maxFPS": 15,
-                        "mapvideo": "0:1",
-                        "mapaudio": "0:0",
-                        "vcodec": "copy",
-                        "audio": true,
-                        "debug": true
-                    }
-                }
-            ]
-        },
-        {
-            "platform": "TuyaLan",
-            "devices": [
-                {
-                    "name": "Lounge room centre 3",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626cc50e337cd66",
-                    "key": “abcdefghi”,
-                    "ip": "192.168.3.41"
-                },
-                {
-                    "name": "Lounge room centre 2",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626cc50e337c98b",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.37"
-                },
-                {
-                    "name": "Lounge room centre 1",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626dc4f22670e71",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.38"
-                },
-                {
-                    "name": "Lounge room aircon",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626dc4f22663f6c",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.39"
-                },
-                {
-                    "name": "Lounge room fireplace",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626dc4f22670943",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.42"
-                },
-                {
-                    "name": "Lounge room TV",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626dc4f22670947",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.40"
-                },
-                {
-                    "name": "Lounge room dining 3",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626b4e62d65dc97",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.44"
-                },
-                {
-                    "name": "Lounge room dining 1",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626cc50e3386e53",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.43"
-                },
-                {
-                    "name": "Lounge room dining 2",
-                    "type": "RGBTWLight",
-                    "manufacturer": "Kogan",
-                    "model": "GU10RGB",
-                    "id": "05018626cc50e337cce5",
-                    "key": "abcdefghi",
-                    "ip": "192.168.3.45"
-                }
-            ],
-            "plugin_map": {
-                "plugin_name": "homebridge-tuya-lan"
-            }
-        },
-        {
-            "platform": "TuyaWebPlatform",
-            "name": "TuyaWebPlatform",
-            "options": {
-                "username": “user@email.com”,
-                "password": “password”,
-                "countryCode": "AU",
-                "platform": "smart_life",
-                "pollingInterval": 10
-            },
-            "plugin_map": {
-                "plugin_name": "homebridge-tuya-web"
-            }
-        }
-    ]
+	"server": {
+		"port": 8080,
+		"origin": "*",
+		"autostart": 0,
+		"home_setup_id": "X-HM://0023ISYWY7E9K",
+		"polling_seconds": 5
+	},
+	"client": {
+		"default_route": "status",
+		"inactive_logoff": 30,
+		"theme": "hoobs-light",
+		"locale": "en",
+		"temp_units": "celsius",
+		"country_code": "AU",
+		"postal_code": "2250",
+		"latitude": "-33.390536",
+		"longitude": "151.341370"
+	},
+	"bridge": {
+		"name": "HOOBS",
+		"port": 51826,
+		"pin": "XXX - XX - XXX",
+		"username": "B7:EC:94:7D:83:99"
+	},
+	"description": "",
+	"ports": {},
+	"accessories": [],
+	"platforms": [{
+			"platform": "BroadlinkRM",
+			"name": "Broadlink RM",
+			"hideScanFrequencyButton": true,
+			"hideLearnButton": false,
+			"hideWelcomeMessage": true,
+			"accessories": [{
+					"name": "Air Con",
+					"type": "switch",
+					"enableAutoOff": false,
+					"data": {
+						"on": "260078006500012d11320e1311140f13111210140f13111210120f3311120e13113210330f3310331012103211320f34103310330f33113211330e13111110121111101210120e1311120f121112101111110f34103310111132101211321111103310120e1311120f12111211110f131033103211320f3411000d05",
+						"off": "2600ee006500012c113210121111111210120f12111110121111103310120f1211321012113210321132103310321033101210120f1211120f12111210120f1210141113101310130f141112101310121110111210111111101210120f1211120e13111111111012101210120f121111101210121012101211526400012c1131101211110f13111110121111101210120f330f131012101111120f3311111033103311341132101210321111103310330e131111101210120f12111110120f1310120f1211120f1211320f1310330e341111101210120f3311111111111211120e1311110f1310120f1211320f3410000d0500000000000000000000"
+					}
+				},
+				{
+					"name": "Air Con - Quiet",
+					"type": "switch",
+					"enableAutoOff": false,
+					"data": {
+						"on": "260078006500012d11320e1311140f13111210140f13111210120f3311120e13113210330f3310331012103211320f34103310330f33113211330e13111110121111101210120e1311120f121112101111110f34103310111132101211321111103310120e1311120f12111211110f131033103211320f3411000d05"
+					}
+				},
+				{
+					"name": "TV Power",
+					"type": "switch",
+					"enableAutoOff": false,
+					"data": {
+						"on": "2600500000012a93151111131411141113121410141213111338133713371237133712371436121214121336133614361237141213111411143613121312111313141337143614361400056c0001284a14000d050000000000000000",
+						"off": "2600500000012995141212121412131213111313141114141437143715371337123714361436121214111436133614361237141212121411143514111313131315111436143612371400056c0001294913000d050000000000000000"
+					}
+				},
+				{
+					"name": "TV Vol Up",
+					"type": "switch",
+					"enableAutoOff": true,
+					"onDuration": "0.5",
+					"data": {
+						"on": "2600500000012a94121213131312131212131312131114111436133613371337123713371237141114121237131213361411131214111411123813121237141114361336133712371400056c0001294a12000d050000000000000000"
+					}
+				},
+				{
+					"name": "TV Vol Down",
+					"type": "switch",
+					"enableAutoOff": true,
+					"onDuration": "0.5",
+					"data": {
+						"on": "2600500000012994151113121213131214111412121214121337133712371436143712381237131313121436133614121411121313121411143612131412133614371138133713371200056d00012a4a14000d050000000000000000"
+					}
+				},
+				{
+					"name": "TV Mute",
+					"type": "switch",
+					"enableAutoOff": false,
+					"data": {
+						"on": "2600500000012995141114111411121314121312141112131436143614361337123914361436131213121312133614361336141212371312123714361212141213111436131214351300056d00012a4914000d050000000000000000"
+					}
+				},
+				{
+					"name": "Apple TV On",
+					"type": "switch",
+					"enableAutoOff": false,
+					"data": {
+						"on": "2600a8000001279413121237133712371213133614361237143513371435131214111412131212371336133714111214111313121214111315341412121411131214121213121312130005940001284912000c4f0001264a13000c4f0001264a14000c4d0001284915000c4c0001264a14000c4e0001264a13000c4e0001284914000c4d0001274913000c4f0001264a13000c4e0001284716000c4d0001284912000c4f0001274914000d05"
+					}
+				}
+			],
+			"hosts": [{
+				"address": "192.168.3.24",
+				"mac": "78:0f:77:51:73:94",
+				"isRFSupported": false
+			}]
+		},
+		{
+			"platform": "Camera-ffmpeg",
+			"plugin_map": {
+				"plugin_name": "homebridge-camera-ffmpeg"
+			},
+			"name": "Camera ffmpeg",
+			"cameras": [{
+					"name": "Frontyard",
+					"videoConfig": {
+						"source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/cGgfeq2RLMYwFled",
+						"stillImageSource": "-i http://192.168.1.202/snap.jpeg",
+						"maxStreams": 2,
+						"maxWidth": 1024,
+						"maxHeight": 576,
+						"maxFPS": 15,
+						"mapvideo": "0:1",
+						"mapaudio": "0:0",
+						"vcodec": "copy",
+						"audio": true,
+						"debug": true
+					}
+				},
+				{
+					"name": "Street",
+					"videoConfig": {
+						"source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/Akbo0dylhMrogxOb",
+						"stillImageSource": "-i http://192.168.1.227/snap.jpeg",
+						"maxStreams": 2,
+						"maxWidth": 1024,
+						"maxHeight": 576,
+						"maxFPS": 15,
+						"mapvideo": "0:1",
+						"mapaudio": "0:0",
+						"vcodec": "copy",
+						"audio": true,
+						"debug": true
+					}
+				},
+				{
+					"name": "Backyard",
+					"videoConfig": {
+						"source": "-rtsp_transport http -re -i rtsp://192.168.1.4:7447/6s1eJTWhqVLWWtkQ",
+						"stillImageSource": "-i http://192.168.1.201/snap.jpeg",
+						"maxStreams": 2,
+						"maxWidth": 1024,
+						"maxHeight": 576,
+						"maxFPS": 15,
+						"mapvideo": "0:1",
+						"mapaudio": "0:0",
+						"vcodec": "copy",
+						"audio": true,
+						"debug": true
+					}
+				}
+			]
+		},
+		{
+			"platform": "TuyaLan",
+			"devices": [{
+					"name": "Lounge room centre 3",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626cc50e337cd66",
+					"key": "abcdefghi",
+					"ip": "192.168.3.41"
+				},
+				{
+					"name": "Lounge room centre 2",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626cc50e337c98b",
+					"key": "abcdefghi",
+					"ip": "192.168.3.37"
+				},
+				{
+					"name": "Lounge room centre 1",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626dc4f22670e71",
+					"key": "abcdefghi",
+					"ip": "192.168.3.38"
+				},
+				{
+					"name": "Lounge room aircon",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626dc4f22663f6c",
+					"key": "abcdefghi",
+					"ip": "192.168.3.39"
+				},
+				{
+					"name": "Lounge room fireplace",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626dc4f22670943",
+					"key": "abcdefghi",
+					"ip": "192.168.3.42"
+				},
+				{
+					"name": "Lounge room TV",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626dc4f22670947",
+					"key": "abcdefghi",
+					"ip": "192.168.3.40"
+				},
+				{
+					"name": "Lounge room dining 3",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626b4e62d65dc97",
+					"key": "abcdefghi",
+					"ip": "192.168.3.44"
+				},
+				{
+					"name": "Lounge room dining 1",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626cc50e3386e53",
+					"key": "abcdefghi",
+					"ip": "192.168.3.43"
+				},
+				{
+					"name": "Lounge room dining 2",
+					"type": "RGBTWLight",
+					"manufacturer": "Kogan",
+					"model": "GU10RGB",
+					"id": "05018626cc50e337cce5",
+					"key": "abcdefghi",
+					"ip": "192.168.3.45"
+				}
+			],
+			"plugin_map": {
+				"plugin_name": "homebridge-tuya-lan"
+			}
+		},
+		{
+			"platform": "TuyaWebPlatform",
+			"name": "TuyaWebPlatform",
+			"options": {
+				"username": "user @email.com",
+				"password": "password",
+				"countryCode": "AU",
+				"platform": "smart_life",
+				"pollingInterval": 10
+			},
+			"plugin_map": {
+				"plugin_name": "homebridge-tuya-web"
+			}
+		}
+	]
 }
